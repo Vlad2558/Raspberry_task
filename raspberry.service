@@ -1,0 +1,12 @@
+[Unit]
+Description=Run service
+After=network.target
+
+[Service]
+User=hp
+WorkingDirectory=/home/hp/Desktop/Raspbarry
+ExecStart=python3 /home/hp/Desktop/Raspbarry/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

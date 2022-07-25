@@ -1,0 +1,21 @@
+[Unit]
+Description=<a description of your application>
+After=network.target
+
+[Service]
+User=<username>
+WorkingDirectory=<path to your app>
+ExecStart=<app start command>
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
+##############
+Steps
+sudo nano /etc/systemd/system/raspberry.service
+
+sudo systemctl daemon-reload
+
+sudo systemctl start raspberry
