@@ -56,6 +56,5 @@ def test_is_number_from_range(open_browser, selector, start_range, end_range):
     Get maximum limit of range.
     """
     driver = open_browser
-    driver.open_page()
     assert start_range <= int(driver.get_element_text_by_id(selector)) <= end_range
     driver.quit()
